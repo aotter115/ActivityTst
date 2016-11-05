@@ -14,6 +14,13 @@
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER"/><!--注意此处和原书有不同-->
             </intent-filter><!--以上两行代码保证该活动成为此程序的主活动-->
+        </activity>//注册的第一个活动
+        <activity android:name=".SecondActivity">
+            <intent-filter>
+                <action android:name="com.devor.aotter.activitytst.ACTION_STAR" />
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="com.devor.aotter.activitytst.MY_CATEGORY"/>
+            </intent-filter>
         </activity>
     </application>
 
