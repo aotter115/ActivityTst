@@ -2,6 +2,7 @@ package com.devor.aotter.activitytst;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -27,8 +28,8 @@ public class FirstActivity extends Activity {
         button1.setOnClickListener(new View.OnClickListener() {//用set方法注册监听器，点击按钮后执行onClick方法
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent("com.devor.aotter.activitytst.ACTION_START");
-                intent.addCategory("com.devor.aotter.activitytst.MY_CATGORY");
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse("http://www.baidu.com"));
                 startActivity(intent);
 //                Toast.makeText(FirstActivity.this, "You clicked Button 1", Toast.LENGTH_SHORT).show();//makeText需要传入的三个参数：context，Toast显示的文本内容，Toast显示的时长
             }

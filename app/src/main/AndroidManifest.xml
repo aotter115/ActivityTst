@@ -17,9 +17,16 @@
         </activity>//注册的第一个活动
         <activity android:name=".SecondActivity">
             <intent-filter>
-                <action android:name="com.devor.aotter.activitytst.ACTION_STAR" />
+                <action android:name="com.devor.aotter.activitytst.ACTION_ACTION"/>
                 <category android:name="android.intent.category.DEFAULT"/>
-                <category android:name="com.devor.aotter.activitytst.MY_CATEGORY"/>
+                <category    android:name="devor.aotter.activitytst.MY_CAREGORY"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".ThirdActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="http"/>
             </intent-filter>
         </activity>
     </application>
